@@ -38,10 +38,8 @@ export default function App() {
     }
   };
 
-  const handleSelect = (id: number) => {
-    const found = movies.find(el => el.id === id) || null;
-    if(!found) return;
-    setSelectedMovie(found);
+  const handleSelect = (movie: Movie) => {
+    setSelectedMovie(movie);
   };
 
   const closeModal = () => setSelectedMovie(null);
